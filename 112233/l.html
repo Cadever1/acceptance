@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Love Proposal Bot 💖</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #fff0f5;
+      text-align: center;
+      padding: 50px;
+    }
+    .box {
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      max-width: 500px;
+      margin: auto;
+    }
+    button {
+      margin: 10px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      background-color: #ff69b4;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #ff1493;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="box" id="chatBox">
+    <h2>Do u love me?</h2>
+    <button onclick="handleLove('yes')">Yes</button>
+    <button onclick="handleLove('no')">No</button>
+  </div>
+
+  <script>
+    function handleLove(answer) {
+      const box = document.getElementById('chatBox');
+      if (answer === 'yes') {
+        box.innerHTML = `
+          <h2>Aaae lob u too 💖</h2>
+          <h3>Will u marry me?</h3>
+          <button onclick="handleMarriage('yes')">Yes</button>
+          <button onclick="handleMarriage('no')">No</button>
+        `;
+      } else {
+        box.innerHTML = `<h2>Firse sochle... I'm kinda lovable 😌</h2>`;
+      }
+    }
+
+    function handleMarriage(answer) {
+      const box = document.getElementById('chatBox');
+      if (answer === 'yes') {
+        box.innerHTML = `
+          <h2>Tyari shuru krde Chachundari</h2>
+          <h3>Will u be my balko ki maa?</h3>
+          <button onclick="handleKids('yes')">Yes</button>
+          <button onclick="handleKids('no')">No</button>
+        `;
+      } else {
+        box.innerHTML = `<h2>Kidnap kr lunga....</h2>`;
+      }
+    }
+
+    function handleKids(answer) {
+      const box = document.getElementById('chatBox');
+      if (answer === 'yes') {
+        box.innerHTML = `<h2>15 Bacche krne h</h2>`;
+      } else {
+        box.innerHTML = `<h2>Zabardsti krni pdegi</h2>`;
+      }
+    }
+  </script>
+
+</body>
+</html>
